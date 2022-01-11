@@ -1,2 +1,7 @@
-<div id="advertisements"></div>
-<% console %>
+<div id="advertisements">
+<% @advertisements.each do |ad|%>
+  <ul>
+  <li> <%= ad['name'] %></li>
+  </ul>
+<%end%>
+</div>
