@@ -6,7 +6,6 @@ App.messages = App.cable.subscriptions.create('DatasChannel', {
     renderAdvertisement: function(data) {
       return `<ul>
                 <li>${data.name}</li>
-                
               </ul>`;
     }
   });

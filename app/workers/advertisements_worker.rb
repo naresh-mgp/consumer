@@ -1,8 +1,8 @@
 class AdvertisementsWorker
     include Sneakers::Worker
-    from_queue "dashboard.advrts"
+    from_queue "examplequeue4",
+               :durable => true
             #  :env => 'test',
-            #  :durable => true,
             #  :ack => true
             #  :threads => 50,
             #  :prefetch => 50,
@@ -18,9 +18,9 @@ class AdvertisementsWorker
     # from_queue "dashboard.advertisements"
              
     
-    def work
-      # puts "Hi naresh................................!!!!!!!!!!!!"
+    def work(raw_advertisement)
       Advertisement.push(raw_advertisement)
-      ack! 
+      # puts "Hi naresh................................!!!!!!!!!!!! #{raw_advertisement.inspect}"
+      # ack! 
     end
   end

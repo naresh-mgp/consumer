@@ -4,7 +4,7 @@ require 'sneakers'
 Sneakers.configure  :heartbeat => 10,
   :amqp => 'amqp://guest:guest@localhost:5672',
   :vhost => '/',
-  :exchange => 'prod.advrts',
+  :exchange => 'example.exchange4',
   :exchange_type => :fanout,
   # :timeout_job_after => 5,      # Maximal seconds to wait for job
   # :prefetch => 10,              # Grab 10 jobs together. Better speed.

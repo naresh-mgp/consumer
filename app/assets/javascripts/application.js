@@ -15,5 +15,4 @@
 //= require turbolinks
 //= require jquery
 //= require jquery_ujs
-//= require ./channels/datas
 //= require_tree .
